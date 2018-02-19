@@ -1,0 +1,10 @@
+pip install mysqlclient
+python manage.py runserver
+python manage.py startapp polls
+python manage.py migrate
+pip freeze > requirements/base.txt
+python manage.py makemigrations polls
+python manage.py sqlmigrate polls 001
+python manage.py createsuperuser --username=n --email=n@gmail.com
+12345678q
+url(r'add/(?P<id>\w{0,50})/$, views.add)
